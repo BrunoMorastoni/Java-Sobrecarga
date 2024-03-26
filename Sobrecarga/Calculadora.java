@@ -1,4 +1,4 @@
-package Atividades.Sobrecarga;
+package Sobrecarga;
 import java.util.Scanner;
 
 public class Calculadora {
@@ -8,15 +8,15 @@ public class Calculadora {
         while (true) {
         Scanner teclado = new Scanner(System.in);
         System.out.println("Digite a operação: \n"
-        +"1- Adição de dois valores inteiros\n"        
-        +"2- Subtração\n"
-        +"3- Multiplicação\n"
-        +"4- Divisão\n"
-        +"5- Exponenciação\n"
-        +"6- Fatorial\n"
-        +"7- Adição de três valores\n"
-        +"8- Adição de dois valores em texto\n"
-        +"9- Encerrar processo");
+        +"1 - Adição de dois valores inteiros\n"        
+        +"2 - Subtração\n"
+        +"3 - Multiplicação\n"
+        +"4 - Divisão\n"
+        +"5 - Exponenciação\n"
+        +"6 - Fatorial\n"
+        +"7 - Adição de três valores\n"
+        +"8 - Adição de dois valores em texto\n"
+        +"9 - Encerrar processo");
 
     int tipo = teclado.nextInt();
     if (tipo == 9) {
@@ -26,7 +26,8 @@ public class Calculadora {
 
     System.out.println("Digite o 1º valor: ");
     int valor1 = teclado.nextInt();
-    int valor2 = 0;
+    int valor2= 0 ;
+
     if(tipo !=6) {
         System.out.println("Digite o 2º valor: ");
         valor2 = teclado.nextInt();
@@ -60,7 +61,10 @@ public class Calculadora {
                  System.out.println("Fatorial = "+operacao.getFatorial());
                  break;
 
-        case 7 : System.out.println("Adição de 3 valores = "+operacao.soma(valor1,valor2,78)); 
+        case 7 : 
+            System.out.println("Digite o 3º valor: ");
+            int valor3 = teclado.nextInt();
+            System.out.println("Adição de 3 valores = "+operacao.soma(valor1,valor2,valor3)); 
                  break;
 
         case 8 : System.out.println("Adição de 2 valores texto = "+operacao.soma(Integer.toString(valor1), Integer.toString(valor2))); 
