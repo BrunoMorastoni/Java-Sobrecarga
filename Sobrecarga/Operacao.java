@@ -1,4 +1,4 @@
-package Atividades.Sobrecarga;
+package Sobrecarga;
 
 public class Operacao {
     private int nroFatorial = 0;
